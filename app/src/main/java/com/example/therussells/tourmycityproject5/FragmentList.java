@@ -3,17 +3,17 @@ package com.example.therussells.tourmycityproject5;
 class FragmentList {
 
 
-    private final int mPLaceName;
+    private final String mPLaceName;
 
-    private final int mPlaceDescription;
+    private final String mPlaceDescription;
 
-    private final int mPlaceAddress;
+    private final String mPlaceAddress;
 
-    private final int mPlacePhoneNumber;
+    private final String mPlacePhoneNumber;
 
     private final int mImageResourceId;
 
-    FragmentList(int placeName, int placeDescription, int placeAddress, int placePhoneNumber, int imageResourceId){
+    FragmentList(String placeName, String placeDescription, String placeAddress, String placePhoneNumber, int imageResourceId){
         mPLaceName = placeName;
         mPlaceDescription = placeDescription;
         mPlaceAddress = placeAddress;
@@ -21,19 +21,19 @@ class FragmentList {
         mImageResourceId = imageResourceId;
     }
 
-    public int getPLaceName(){
+    public String getPLaceName(){
         return mPLaceName;
     }
 
-    public int getPlaceDescription(){
+    public String getPlaceDescription(){
         return mPlaceDescription;
     }
 
-    public int getPlaceAddress(){
+    public String getPlaceAddress(){
         return mPlaceAddress;
     }
 
-    public int getPlacePhoneNumber(){
+    public String getPlacePhoneNumber(){
         return mPlacePhoneNumber;
     }
 

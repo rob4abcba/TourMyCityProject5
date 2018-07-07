@@ -16,17 +16,12 @@ import java.util.ArrayList;
  * A simple {@link Fragment} subclass.
  */
 public class FoodFragment extends Fragment {
-    public static final String NAME = "Food";
 
 
     public FoodFragment() {
         // Required empty public constructor
     }
 
-
-    public static FoodFragment newInstance(){
-        return new FoodFragment();
-    }
 
 
     @Override
@@ -35,13 +30,17 @@ public class FoodFragment extends Fragment {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.list_item, container, false);
 
-        final ArrayList<FragmentList> fragmentlist = new ArrayList<>();
+        final ArrayList<FragmentList> fragmentArrayList = new ArrayList<>();
+        rootView.findViewById(R.id.list_item);
 
-        fragmentlist.add(new FragmentList(R.string.backyard_pizza, R.string.backyard_description,  R.string.backyard_address, R.string.backyard_phone_number, R.drawable.backyardImg));
+        fragmentArrayList.add(new FragmentList(getString(R.string.backyard_pizza), getString(R.string.backyard_description),
+                getString(R.string.backyard_address), getString(R.string.backyard_phone_number), R.drawable.backyardImg));
 
-        ListView listView = rootView.findViewById(R.id.list_item);
+        MainActivity.PlaceholderFragment.FragmentListAdapter adapter;
+        adapter = new MainActivity.PlaceholderFragment.FragmentListAdapter(getActivity(), fragmentArrayList);
 
-        MainActivity.FragmentListAdapter adapter = new MainActivity.FragmentListAdapter(rootView.getContext(), fragmentlist);
+        ListView listView = rootView.findViewById(R.id.final_list_view);
+
         listView.setAdapter(adapter);
 
         return rootView;

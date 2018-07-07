@@ -1,9 +1,7 @@
 package com.example.therussells.tourmycityproject5;
 
 import android.content.Context;
-import android.os.Build;
 import android.support.annotation.NonNull;
-import android.support.annotation.RequiresApi;
 import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -36,22 +34,11 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        // Create the adapter that will return a fragment for each of the three
-        // primary sections of the activity.
-        /*
-      The {@link android.support.v4.view.PagerAdapter} that will provide
-      fragments for each of the sections. We use a
-      {@link FragmentPagerAdapter} derivative, which will keep every
-      loaded fragment in memory. If this becomes too memory intensive, it
-      may be best to switch to a
-      {@link android.support.v4.app.FragmentStatePagerAdapter}.
-     */
-        SectionsPagerAdapter mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
-        // Set up the ViewPager with the sections adapter.
-        /*
-      The {@link ViewPager} that will host the section contents.
-     */
+        PlaceholderFragment.SectionsPagerAdapter mSectionsPagerAdapter = new PlaceholderFragment.SectionsPagerAdapter(getSupportFragmentManager());
+
+
+
         ViewPager mViewPager = findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
@@ -99,35 +86,13 @@ public class MainActivity extends AppCompatActivity {
         public PlaceholderFragment() {
         }
 
+
         /**
-         * Returns a new instance of this fragment for the given section
-         * number.
-         */
-        public static PlaceholderFragment newInstance(int sectionNumber) {
-            PlaceholderFragment fragment = new PlaceholderFragment();
-            Bundle args = new Bundle();
-            args.putInt(ARG_SECTION_NUMBER, sectionNumber);
-            fragment.setArguments(args);
-            return fragment;
-        }
-
-        @RequiresApi(api = Build.VERSION_CODES.KITKAT)
-        @Override
-        public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_main, container, false);
-            TextView textView = rootView.findViewById(R.id.section_label);
-            textView.setText(getString(R.string.section_format, Objects.requireNonNull(getArguments()).getInt(ARG_SECTION_NUMBER)));
-            return rootView;
-        }
-    }
-
-    /**
      * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
      * one of the sections/tabs/pages.
      *   This adapter will display each fragment on the screen to user
      */
-    class SectionsPagerAdapter extends FragmentPagerAdapter {
+    static class SectionsPagerAdapter extends FragmentPagerAdapter {
 
       
         SectionsPagerAdapter(FragmentManager fm) {
@@ -181,13 +146,10 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public static class FragmentListAdapter extends ArrayAdapter<FragmentList> {
+    static class FragmentListAdapter extends ArrayAdapter<FragmentList> {
 
-        private final Context mContext;
-
-    FragmentListAdapter(Context context, ArrayList<FragmentList> fragmentlist) {
-            super(context, 0, fragmentlist);
-            mContext = context;
+        FragmentListAdapter(Context context, ArrayList<FragmentList> fragmentArrayList) {
+            super(context, 0, fragmentArrayList);
         }
         @NonNull
         @Override
@@ -222,4 +184,4 @@ public class MainActivity extends AppCompatActivity {
             return convertView;
         }
     }
-}
+}}
