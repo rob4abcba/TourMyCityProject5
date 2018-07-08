@@ -67,9 +67,6 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-
-
-
         /**
      * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
      * one of the sections/tabs/pages.
@@ -90,23 +87,21 @@ public class MainActivity extends AppCompatActivity {
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:
-                    return new EmergencyServicesFragment();
-                case 1:
                     return new GettingAroundFragment();
-                case 2:
+                case 1:
                     return new AccommodationsFragment();
-                case 3:
+                case 2:
                     return new FoodFragment();
                 default:
-                    return new ActivitiesFragment();
+                    return new ShoppingFragment();
             }
         }
 
 
         @Override
         public int getCount() {
-            // Show 5 total pages.
-            return 5;
+            // Show 4 total pages.
+            return 4;
         }
 
         // This determines the title for each tab
@@ -114,16 +109,15 @@ public class MainActivity extends AppCompatActivity {
         public CharSequence getPageTitle (int position){
             // Generate title based on item position
             switch (position) {
+
                 case 0:
-                    return "Emergency Services";
+                    return "Travel";
                 case 1:
-                    return "Getting Around";
+                    return "Hotel";
                 case 2:
-                    return "Accommodations";
-                case 3:
                     return "Food";
-                case 4:
-                    return "Activities";
+                case 3:
+                    return "Shop";
             }
             return null;
         }

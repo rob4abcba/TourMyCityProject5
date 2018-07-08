@@ -28,10 +28,9 @@ public class FoodFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View rootView = inflater.inflate(R.layout.list_item, container, false);
+        View rootView = inflater.inflate(R.layout.final_list_view, container, false);
 
         final ArrayList<FragmentList> fragmentArrayList = new ArrayList<>();
-        rootView.findViewById(R.id.list_item);
 
         fragmentArrayList.add(new FragmentList(getString(R.string.backyard_pizza), getString(R.string.backyard_description),
                 getString(R.string.backyard_address), getString(R.string.backyard_phone_number), R.drawable.backyardimage));
