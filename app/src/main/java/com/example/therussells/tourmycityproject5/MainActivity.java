@@ -1,22 +1,20 @@
 package com.example.therussells.tourmycityproject5;
 
 import android.content.Context;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.TabLayout;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -35,18 +33,14 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
 
-        PlaceholderFragment.SectionsPagerAdapter mSectionsPagerAdapter = new PlaceholderFragment.SectionsPagerAdapter(getSupportFragmentManager());
+        SectionsPagerAdapter mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
-
-
-        ViewPager mViewPager = findViewById(R.id.container);
+        ViewPager mViewPager = findViewById(R.id.pager);
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
         //The TabLayout will receive the ViewPager
         TabLayout tabLayout = findViewById(R.id.tabs);
-
-        mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
-        tabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(mViewPager));
+        tabLayout.setupWithViewPager(mViewPager);
     }
 
 
@@ -73,18 +67,7 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    /**
-     * A placeholder fragment containing a simple view.
-     */
-    public static class PlaceholderFragment extends Fragment {
-        /**
-         * The fragment argument representing the section number for this
-         * fragment.
-         */
-        private static final String ARG_SECTION_NUMBER = "section_number";
 
-        public PlaceholderFragment() {
-        }
 
 
         /**
@@ -173,7 +156,7 @@ public class MainActivity extends AppCompatActivity {
             TextView addressView = convertView.findViewById(R.id.address);
             TextView phonenumberView = convertView.findViewById(R.id.phonenumber);
 
-            assert currentFragmentList != null;
+            if (currentFragmentList == null) throw new AssertionError();
             imageView.setImageResource(currentFragmentList.getImageResourceId());
             titleView.setText(currentFragmentList.getPLaceName());
             descriptionView.setText(currentFragmentList.getPlaceDescription());
@@ -184,4 +167,6 @@ public class MainActivity extends AppCompatActivity {
             return convertView;
         }
     }
-}}
+
+
+}
