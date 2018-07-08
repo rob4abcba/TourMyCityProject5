@@ -19,8 +19,7 @@ public class FoodFragment extends Fragment {
 
 
     public static FoodFragment newInstance() {
-        FoodFragment fragment = new FoodFragment();
-        return fragment;
+        return new FoodFragment();
     }
 
 
@@ -35,7 +34,7 @@ public class FoodFragment extends Fragment {
         rootView.findViewById(R.id.list_item);
 
         fragmentArrayList.add(new FragmentList(getString(R.string.backyard_pizza), getString(R.string.backyard_description),
-                getString(R.string.backyard_address), getString(R.string.backyard_phone_number), R.drawable.backyardImg));
+                getString(R.string.backyard_address), getString(R.string.backyard_phone_number), R.drawable.backyardimage));
 
         MainActivity.FragmentListAdapter adapter = new MainActivity.FragmentListAdapter(getActivity(), fragmentArrayList);
 
