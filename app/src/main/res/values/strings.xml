@@ -28,8 +28,7 @@
 </string>
     <string name="backyard_address">Address: 833 3rd Ave, Huntington, WV 25701</string>
     <string name="backyard_phone_number">Phone: (304) 241–2958</string>
-
-
+    <string name="image_view_card">image view card</string>
 
 
 </resources>
