@@ -22,20 +22,20 @@ public class FoodFragment extends Fragment {
         return new FoodFragment();
     }
 
-
-
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View rootView = inflater.inflate(R.layout.final_list_view, container, false);
+
 
         final ArrayList<FragmentList> fragmentArrayList = new ArrayList<>();
+
+        // Inflate the layout for this fragment
+        View rootView = inflater.inflate(R.layout.final_list_view, container, false);
 
         fragmentArrayList.add(new FragmentList(getString(R.string.backyard_pizza), getString(R.string.backyard_description),
                 getString(R.string.backyard_address), getString(R.string.backyard_phone_number), R.drawable.backyardimage));
 
-        MainActivity.FragmentListAdapter adapter = new MainActivity.FragmentListAdapter(getActivity(), fragmentArrayList);
+        MainActivity.PlaceholderFragment.FragmentListAdapter adapter = new MainActivity.PlaceholderFragment.FragmentListAdapter(getActivity(), fragmentArrayList);
 
         ListView listView = rootView.findViewById(R.id.final_list_view);
 

@@ -32,6 +32,20 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        //adding vector image back button to toolbar
+        toolbar.setTitle(getString(R.string.app_name));
+        toolbar.setNavigationIcon(R.drawable.ic_arrow_back_black_24dp);
+
+        // making the back button clickable
+
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+
 
         PlaceholderFragment.SectionsPagerAdapter mSectionsPagerAdapter = new PlaceholderFragment.SectionsPagerAdapter(getSupportFragmentManager());
 
