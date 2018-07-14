@@ -21,7 +21,6 @@ public class FoodFragment extends Fragment {
 
     RecyclerView recyclerView;
     LinearLayoutManager layoutManager;
-    RecyclerViewAdapter adapter;
 
 
     public static FoodFragment newInstance() {
@@ -54,7 +53,8 @@ public class FoodFragment extends Fragment {
         fragmentArrayList.add(new FragmentList(getString(R.string.backyard_pizza), getString(R.string.backyard_description),
                 getString(R.string.backyard_address), getString(R.string.backyard_phone_number), R.drawable.backyardimage));
 
-        MainActivity.PlaceholderFragment.FragmentListAdapter adapter = new MainActivity.PlaceholderFragment.FragmentListAdapter(getActivity(), fragmentArrayList);
+        new MainActivity.PlaceholderFragment.FragmentListAdapter(getActivity(), fragmentArrayList);
+        MainActivity.PlaceholderFragment.FragmentListAdapter adapter;
 
         ListView listView = rootView.findViewById(R.id.my_recycler_view);
 
