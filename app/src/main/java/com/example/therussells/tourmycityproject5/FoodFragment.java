@@ -20,6 +20,8 @@ import java.util.ArrayList;
 public class FoodFragment extends Fragment {
 
     RecyclerView recyclerView;
+    LinearLayoutManager layoutManager;
+    RecyclerViewAdapter adapter;
 
 
     public static FoodFragment newInstance() {
@@ -31,23 +33,34 @@ public class FoodFragment extends Fragment {
                              Bundle savedInstanceState) {
 
 
-        final ArrayList<FragmentList> fragmentArrayList = new ArrayList<>();
+
 
         // Inflate the layout for this fragment
-        View rootView = inflater.inflate(R.layout.final_list_view, container, false);
+        View rootView = inflater.inflate(R.layout.final_list_view, null);
 
-        recyclerView = (RecyclerView) view.findViewById(R.id.my_recycler_view);
-        LinearLayoutManager mLayoutManager = new LinearLayoutManager(getActivity());
-        recyclerView.setLayoutManager(mLayoutManager);
+        recyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
+
+        // use this setting to improve performance if you know that changes
+        // in content do not change the layout size of the RecyclerView
+        recyclerView.setHasFixedSize(true);
+
+        // use a linear layout manager
+        layoutManager = new LinearLayoutManager(getActivity());
+        recyclerView.setLayoutManager(layoutManager);
+
+
+        final ArrayList<FragmentList> fragmentArrayList = new ArrayList<>();
 
         fragmentArrayList.add(new FragmentList(getString(R.string.backyard_pizza), getString(R.string.backyard_description),
                 getString(R.string.backyard_address), getString(R.string.backyard_phone_number), R.drawable.backyardimage));
 
         MainActivity.PlaceholderFragment.FragmentListAdapter adapter = new MainActivity.PlaceholderFragment.FragmentListAdapter(getActivity(), fragmentArrayList);
 
-        ListView listView = rootView.findViewById(R.id.final_list_view);
+        ListView listView = rootView.findViewById(R.id.my_recycler_view);
 
-        listView.setAdapter(adapter);
+        // specify an adapter (see also next example)
+        adapter = new CardAdapter(fragmentArrayList);
+        recyclerView.setAdapter(adapter);
 
         return rootView;
     }
