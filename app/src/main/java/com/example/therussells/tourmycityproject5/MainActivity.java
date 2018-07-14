@@ -192,6 +192,7 @@ public class MainActivity extends AppCompatActivity {
                     convertView = LayoutInflater.from(getContext()).inflate(R.layout.list_item, parent, false);
                 }
 
+                //The different objects at each position
                 ImageView imageView = convertView.findViewById(R.id.image);
                 TextView titleView = convertView.findViewById(R.id.title);
                 TextView descriptionView = convertView.findViewById(R.id.description);
