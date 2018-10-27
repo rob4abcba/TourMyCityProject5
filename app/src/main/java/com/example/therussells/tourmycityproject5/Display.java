@@ -23,7 +23,7 @@ class Display {
     }
 
     // get methods that return Strings and an integer
-    String getPLaceName(){
+    String getPlaceName(){
         return placeName;
     }
 

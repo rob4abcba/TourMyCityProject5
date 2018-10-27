@@ -11,8 +11,6 @@ import android.support.v4.app.FragmentPagerAdapter;
  */
 public class FragmentAdapter extends FragmentPagerAdapter {
 
-    private String tabTitles[] = new String[] {"Travel", "Hotel", "Food", "Shop"};
-
     FragmentAdapter(FragmentManager fm) {
         super(fm);
     }

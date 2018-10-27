@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        //adding vector image back button to toolbar and nameof the app to toolbar
+        //adding vector image back button to toolbar and name of the app to toolbar
         toolbar.setTitle(getString(R.string.app_name));
         toolbar.setNavigationIcon(R.drawable.ic_arrow_back_black_24dp);
 
