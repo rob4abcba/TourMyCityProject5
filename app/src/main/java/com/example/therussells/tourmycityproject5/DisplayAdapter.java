@@ -33,7 +33,6 @@ public class DisplayAdapter extends ArrayAdapter<Display> {
         Display currentDisplay = getItem(position);
 
         //The different objects at each position located by each of their Id's
-
         assert convertView != null;
         ImageView imageView = convertView.findViewById(R.id.image);
         TextView titleView = convertView.findViewById(R.id.title);
@@ -41,15 +40,12 @@ public class DisplayAdapter extends ArrayAdapter<Display> {
         TextView addressView = convertView.findViewById(R.id.address);
         TextView phonenumberView = convertView.findViewById(R.id.phonenumber);
 
-
         assert currentDisplay != null;
         imageView.setImageResource(currentDisplay.getImageResourceId());
         titleView.setText(currentDisplay.getPlaceName());
         descriptionView.setText(currentDisplay.getPlaceDescription());
         addressView.setText(currentDisplay.getPlaceAddress());
         phonenumberView.setText(currentDisplay.getPlacePhoneNumber());
-
-
 
         //search for the view with the give id
         View textContainer = listItemView.findViewById(R.id.text_view_Id);
