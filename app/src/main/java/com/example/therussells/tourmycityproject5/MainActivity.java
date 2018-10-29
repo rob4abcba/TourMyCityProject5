@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // Create an adapter that knows which fragment should be shown on each page
-        FragmentAdapter adapter = new FragmentAdapter(getSupportFragmentManager());
+        FragmentAdapter adapter = new FragmentAdapter(getSupportFragmentManager(),MainActivity.this);
 
         // This will locate the view pager and allow the user to swipe between fragments
         ViewPager mViewPager = findViewById(R.id.pager);

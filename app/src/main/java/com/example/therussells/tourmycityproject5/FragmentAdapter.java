@@ -11,7 +11,7 @@ import android.support.v4.app.FragmentPagerAdapter;
  */
 public class FragmentAdapter extends FragmentPagerAdapter {
 
-    FragmentAdapter(FragmentManager fm) {
+    FragmentAdapter(FragmentManager fm, MainActivity mainActivity) {
         super(fm);
     }
 
@@ -28,9 +28,10 @@ public class FragmentAdapter extends FragmentPagerAdapter {
                 return new AccommodationsFragment();
             case 2:
                 return new FoodFragment();
-            default:
+            case 3:
                 return new ShoppingFragment();
         }
+        return null;
     }
 
 

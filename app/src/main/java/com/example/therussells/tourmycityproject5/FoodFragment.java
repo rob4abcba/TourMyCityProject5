@@ -20,12 +20,9 @@ public class FoodFragment extends Fragment {
 
     public FoodFragment(){}
 
-    public static FoodFragment newInstance() {
-        return new FoodFragment();
-    }
 
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
         View rootView = inflater.inflate(R.layout.display_view, container, false);
@@ -36,7 +33,7 @@ public class FoodFragment extends Fragment {
                 getString(R.string.backyard_address), getString(R.string.backyard_phone_number), R.drawable.backyardimage));
 
         // setting up array adapter
-        DisplayAdapter adapter = new DisplayAdapter(getActivity(), display, R.color.cardview_shadow_start_color);
+         DisplayAdapter adapter = new DisplayAdapter(getActivity(), display, R.color.cardview_shadow_start_color);
 
         // locating the listView and setting the adapter to it
         ListView listView = rootView.findViewById(R.id.display_ID);

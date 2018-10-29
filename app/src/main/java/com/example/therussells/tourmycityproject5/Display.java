@@ -1,6 +1,6 @@
 package com.example.therussells.tourmycityproject5;
 
-class Display {
+public  class Display {
 
     //class declaration with 5 instance variables for this fragment
     private final String placeName;

@@ -24,7 +24,8 @@ public class DisplayAdapter extends ArrayAdapter<Display> {
     @Override
     public View getView(int position, View convertView, @NonNull ViewGroup parent) {
         View listItemView  = convertView;
-        if (convertView == null) {
+        // if null inflate it from list_item
+        if (listItemView == null) {
             //The inflater is used to map the instance variables to the TextView in the
             listItemView= LayoutInflater.from(getContext()).inflate(R.layout.list_item, parent, false);
         }
@@ -33,14 +34,14 @@ public class DisplayAdapter extends ArrayAdapter<Display> {
         Display currentDisplay = getItem(position);
 
         //The different objects at each position located by each of their Id's
-        assert convertView != null;
-        ImageView imageView = convertView.findViewById(R.id.image);
-        TextView titleView = convertView.findViewById(R.id.title);
-        TextView descriptionView = convertView.findViewById(R.id.description);
-        TextView addressView = convertView.findViewById(R.id.address);
-        TextView phonenumberView = convertView.findViewById(R.id.phonenumber);
 
-        assert currentDisplay != null;
+        ImageView imageView = listItemView.findViewById(R.id.image);
+        TextView titleView = listItemView.findViewById(R.id.title);
+        TextView descriptionView = listItemView.findViewById(R.id.description);
+        TextView addressView = listItemView.findViewById(R.id.address);
+        TextView phonenumberView =listItemView.findViewById(R.id.phonenumber);
+
+
         imageView.setImageResource(currentDisplay.getImageResourceId());
         titleView.setText(currentDisplay.getPlaceName());
         descriptionView.setText(currentDisplay.getPlaceDescription());
@@ -52,10 +53,10 @@ public class DisplayAdapter extends ArrayAdapter<Display> {
 
         int color = ContextCompat.getColor(getContext(),mColorResourceId);
 
-        textContainer.setBackgroundColor(color);
+        //textContainer.setBackgroundColor(color);
 
         // set its background resource to the mColorResourceId
-        textContainer.setBackgroundResource(mColorResourceId);
+       // textContainer.setBackgroundResource(mColorResourceId);
 
         return listItemView;
     }
