@@ -22,7 +22,7 @@ public class FoodFragment extends Fragment {
 
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
         View rootView = inflater.inflate(R.layout.display_view, container, false);
@@ -30,10 +30,18 @@ public class FoodFragment extends Fragment {
         final ArrayList<Display> display = new ArrayList<>();
 
         display.add(new Display(getString(R.string.backyard_pizza), getString(R.string.backyard_description),
-                getString(R.string.backyard_address), getString(R.string.backyard_phone_number), R.drawable.backyardimage));
+                getString(R.string.backyard_address), getString(R.string.backyard_phone_number), R.drawable.baryard2));
+        display.add(new Display(getString(R.string.roosters), getString(R.string.roosters_description),
+                getString(R.string.roosters_address), getString(R.string.roosters_phone_number), R.drawable.roosters));
+        display.add(new Display(getString(R.string.lebistro), getString(R.string.lebistro_description),
+                getString(R.string.lebistro_address), getString(R.string.lebistro_phone_number), R.drawable.bistro));
+        display.add(new Display(getString(R.string.surin), getString(R.string.surin_description),
+                getString(R.string.surin_address), getString(R.string.surin_phone_number), R.drawable.surin));
+        display.add(new Display(getString(R.string.coldstone), getString(R.string.coldstone_description),
+                getString(R.string.coldstone_address), getString(R.string.coldstone_phone_number), R.drawable.coldstone));
 
         // setting up array adapter
-         DisplayAdapter adapter = new DisplayAdapter(getActivity(), display, R.color.cardview_shadow_start_color);
+         DisplayAdapter adapter = new DisplayAdapter(getActivity(), display, R.color.colorPrimary);
 
         // locating the listView and setting the adapter to it
         ListView listView = rootView.findViewById(R.id.display_ID);

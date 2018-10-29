@@ -24,11 +24,81 @@
     <!--Food Fragment-->
     <string name="backyard_pizza">Backyard Pizza and Raw Bar</string>
     <string name="backyard_description">Hip hangout featuring wood-fired pizzas, grilled oysters,
-        a raw bar and craft brews in warm environs.
-</string>
+        a raw bar and craft brews in warm environs.</string>
     <string name="backyard_address">833 3rd Ave, \nHuntington, WV 25701</string>
     <string name="backyard_phone_number">(304) 241–2958</string>
     <string name="image_view_card">image view card</string>
+
+    <string name="roosters">Roosters</string>
+    <string name="roosters_description"> Outpost of a casual chain serving American comfort food and specializing in chicken wings.</string>
+    <string name="roosters_address">26 Pullman Square, \nHuntington, WV 25701</string>
+    <string name="roosters_phone_number"> (304) 522–9464</string>
+    <string name="describing_image">describing_image</string>
+    
+    <string name="lebistro">Le Bistro</string>
+    <string name="lebistro_description">Polished, chandelier-lit locale for elevated American dishes with French flair and craft cocktails.</string>
+    <string name="lebistro_address">905 3rd Ave, \nHuntington, WV 25701
+</string>
+    <string name="lebistro_phone_number">(304) 523–2012</string>
+
+    <string name="surin">Surin of Thailand</string>
+    <string name="surin_description">Chain restaurant offering Thai dishes such as curries and noodles plus sushi and martini</string>
+    <string name="surin_address">912 3rd Ave, \nHuntington, WV 25701
+</string>
+    <string name="surin_phone_number">(681) 204–5099</string>
+
+    <string name="coldstone">Cold Stone Creamery</string>
+    <string name="coldstone_description">Ice cream chain offering design-your-own creations hand-mixed on a granite slab, plus shakes and more.</string>
+    <string name="coldstone_address">10 Pullman Square #204, \nHuntington, WV 25701</string>
+    <string name="coldstone_phone_number">(304) 522–6640</string>
+
+    <!--Food Fragment-->
+    <string name="chicos" />
+    <string name="chicos_description">Clothing chain offering women/s fashions including careerwear, dressy separates and more.</string>
+    <string name="chicos_address">22 Pullman Square \nHuntington, WV, 2571</string>
+    <string name="chicos_phone_number">(304) 523–3323</string>
+
+
+
+
+
+
+
+Urban couture
+Trendy boutique selling women's casualwear, including dresses, rompers and accessories
+    917 3rd Ave, Huntington, WV 25701
+    (304) 522-2776
+
+    VC BOUTIQUE
+    Women's clothing store in Huntington, West Virginia
+    900 4th Ave, Huntington, WV 25701
+    304) 525-2204
+
+    tHE POTTERY PLACE
+    An all-inclusive paint your own pottery studio
+    : 940 3rd Ave, Huntington, WV 25701
+    Phone: (304) 525-8777
+
+    Empire books and news
+    Address: 30 Pullman Sq, Huntington, WV 25701
+    Phone: (304) 529-7323
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 </resources>

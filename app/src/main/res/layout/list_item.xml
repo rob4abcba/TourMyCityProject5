@@ -1,55 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_gravity="center"
-    android:orientation="vertical"
-    android:background="@color/cardview_dark_background">
+    android:isScrollContainer="true"
+    android:padding="20dp"
+    android:orientation="vertical">
 
     <!--CardView used to contain other views in order to display info to the user.-->
     <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:id="@+id/card_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:padding="20dp"
         android:layout_margin="10dp"
-        card_view:cardBackgroundColor="@color/cardview_light_background"
-        card_view:cardCornerRadius="10dp"
-        card_view:contentPadding="10dp">
+        card_view:cardCornerRadius="20dp"
+        card_view:cardElevation="10dp"
+        android:layout_gravity="center">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="horizontal">
+            android:layout_height="match_parent">
 
             <ImageView
                 android:id="@+id/image"
-                android:layout_width="100dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
                 android:adjustViewBounds="true"
-                android:contentDescription="@string/image_view_card"
+                android:background="@color/colorAccent"
+                android:contentDescription="@string/describing_image"
                 android:scaleType="fitCenter"
-                android:src="@drawable/backyardimage" />
+                android:src="@drawable/baryard2" />
+
 
             <LinearLayout
                 android:id="@+id/text_view_Id"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:orientation="vertical"
-                tools:ignore="InconsistentLayout">
+                android:layout_height="100dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_toEndOf="@id/image"
+                android:layout_toRightOf="@id/image"
+                android:orientation="vertical">
 
 
                 <TextView
                     android:id="@+id/title"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginLeft="16dp"
-                    android:layout_weight="3"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
                     android:gravity="top"
                     android:text="@string/backyard_pizza"
                     android:textAppearance="?android:textAppearanceMedium"
@@ -59,9 +63,9 @@
                     android:id="@+id/description"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginLeft="16dp"
-                    android:layout_weight="6"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="2"
                     android:text="@string/backyard_description"
                     android:textAppearance="?android:textAppearanceSmall" />
 
@@ -69,9 +73,10 @@
                     android:id="@+id/address"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginLeft="16dp"
-                    android:layout_weight="4"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+
                     android:text="@string/backyard_address"
                     android:textAppearance="?android:textAppearanceSmall" />
 
@@ -79,17 +84,17 @@
                     android:id="@+id/phonenumber"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginLeft="16dp"
-                    android:layout_weight="2"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
                     android:text="@string/backyard_phone_number"
                     android:textAppearance="?android:textAppearanceSmall" />
-
             </LinearLayout>
 
-        </LinearLayout>
+
+        </RelativeLayout>
 
     </android.support.v7.widget.CardView>
 
-</FrameLayout>
+</LinearLayout>
 
