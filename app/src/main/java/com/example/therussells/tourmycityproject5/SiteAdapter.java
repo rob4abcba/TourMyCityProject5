@@ -14,12 +14,13 @@ import java.util.ArrayList;
 public class SiteAdapter extends RecyclerView.Adapter<SiteAdapter.SiteViewHolder> {
 
     //storing all the data we want to display in an ArrayList
-    private ArrayList<Site>sites;
 
+    private ArrayList<Site>sites;
+    private ViewGroup parent;
 
 
     //getting the context and array we want with the constructor
-   public SiteAdapter(ArrayList<Site> display) {
+   public SiteAdapter(ArrayList<Site> sites) {
         this.sites = sites;
 
     }
@@ -28,7 +29,7 @@ public class SiteAdapter extends RecyclerView.Adapter<SiteAdapter.SiteViewHolder
     @NonNull
     @Override
     // create new views(invoked by the layout manager)
-    public SiteViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+    public SiteViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         //The inflater is used to map the instance variables to the TextView in the
         View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item,parent,false);
         //returning the Viewholder
