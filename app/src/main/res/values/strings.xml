@@ -67,6 +67,28 @@
     <string name="empirebooks_phone_number">(304) 529–7323</string>
 
 
+    <!--Travel Fragment-->
+    <string name="uber">Uber</string>
+    <string name="uberaddress">Download App</string>
+    <string name="ubercontact">Download App</string>
+
+    <string name="lyft">Lyft</string>
+    <string name="lyftaddress">Download App</string>
+    <string name="lyftcontact">Download App</string>
+
+    <string name="metro_tri_state">Metro Tri State Cab</string>
+    <string name="metro_address">650 Washington Ave, \nHuntington, WV 25701</string>
+    <string name="metro_phone_number">(740) 451–4990</string>
+
+    <string name="bus">Main Tri-State Transit Authority Station
+</string>
+    <string name="bus_address">1120 Virginia Ave, \nHuntington, WV 25704
+</string>
+    <string name="bus_phone_number">(304) 529–7433</string>
+
+    <string name="taxi_tommy">Uber</string>
+    <string name="taxi_tommy_address">650 Washington Ave, \nHuntington, WV 25701</string>
+    <string name="taxi_tommy_phone_number">Download App</string>
 
 
     <!--Hotel Fragment-->
