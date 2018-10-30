@@ -21,9 +21,7 @@ public class AccommodationsFragment extends Fragment {
 
     public AccommodationsFragment(){}
 
-    public static FoodFragment newInstance() {
-        return new FoodFragment();
-    }
+
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
@@ -33,16 +31,11 @@ public class AccommodationsFragment extends Fragment {
 
         final ArrayList<Display> display = new ArrayList<>();
 
-        display.add(new Display(getString(R.string.backyard_pizza), getString(R.string.backyard_description),
-                getString(R.string.backyard_address), getString(R.string.backyard_phone_number), R.drawable.baryard2));
-        display.add(new Display(getString(R.string.roosters), getString(R.string.roosters_description),
-                getString(R.string.roosters_address), getString(R.string.roosters_phone_number), R.drawable.roosters));
-        display.add(new Display(getString(R.string.lebistro), getString(R.string.lebistro_description),
-                getString(R.string.lebistro_address), getString(R.string.lebistro_phone_number), R.drawable.bistro));
-        display.add(new Display(getString(R.string.surin), getString(R.string.surin_description),
-                getString(R.string.surin_address), getString(R.string.surin_phone_number), R.drawable.surin));
-        display.add(new Display(getString(R.string.coldstone), getString(R.string.coldstone_description),
-                getString(R.string.coldstone_address), getString(R.string.coldstone_phone_number), R.drawable.coldstone));
+        display.add(new Display(getString(R.string.pullman), getString(R.string.pullman_address), getString(R.string.pullman_phone_number), R.drawable.pullmanplaza));
+        display.add(new Display(getString(R.string.hampton_inn),getString(R.string.hampton_inn_address), getString(R.string.hampton_inn_phone_number), R.drawable.hamptoninn));
+        display.add(new Display(getString(R.string.holiday_inn),getString(R.string.holiday_inn_address), getString(R.string.holiday_inn_phone_number), R.drawable.holidayinn));
+        display.add(new Display(getString(R.string.days_inn),getString(R.string.days_inn_address), getString(R.string.days_inn_phone_number), R.drawable.daysinn));
+        display.add(new Display(getString(R.string.econo_lodge),getString(R.string.econo_lodge_address), getString(R.string.econo_lodge_phone_number), R.drawable.econoinn));
 
         // setting up array adapter
         DisplayAdapter adapter = new DisplayAdapter(getActivity(), display, R.color.colorPrimary);
@@ -53,6 +46,5 @@ public class AccommodationsFragment extends Fragment {
 
         return rootView;
     }
-
 
 }

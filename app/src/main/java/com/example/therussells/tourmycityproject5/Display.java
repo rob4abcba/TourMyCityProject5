@@ -2,10 +2,8 @@ package com.example.therussells.tourmycityproject5;
 
 public  class Display {
 
-    //class declaration with 5 instance variables for this fragment
+    //class declaration with 4 instance variables for this fragment
     private final String placeName;
-
-    private final String placeDescription;
 
     private final String placeAddress;
 
@@ -14,9 +12,8 @@ public  class Display {
     private final int imageResourceId;
 
     // constructors in which we instantiate the instance variables
-    Display(String placeName, String placeDescription, String placeAddress, String placePhoneNumber, int imageResourceId){
+    Display(String placeName, String placeAddress, String placePhoneNumber, int imageResourceId){
         this.placeName = placeName;
-        this.placeDescription = placeDescription;
         this.placeAddress = placeAddress;
         this.placePhoneNumber = placePhoneNumber;
         this.imageResourceId = imageResourceId;
@@ -25,10 +22,6 @@ public  class Display {
     // get methods that return Strings and an integer
     String getPlaceName(){
         return placeName;
-    }
-
-    String getPlaceDescription(){
-        return placeDescription;
     }
 
     String getPlaceAddress(){

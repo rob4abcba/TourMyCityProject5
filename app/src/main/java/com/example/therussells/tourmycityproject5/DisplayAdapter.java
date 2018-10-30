@@ -37,14 +37,12 @@ public class DisplayAdapter extends ArrayAdapter<Display> {
 
         ImageView imageView = listItemView.findViewById(R.id.image);
         TextView titleView = listItemView.findViewById(R.id.title);
-        TextView descriptionView = listItemView.findViewById(R.id.description);
         TextView addressView = listItemView.findViewById(R.id.address);
         TextView phonenumberView =listItemView.findViewById(R.id.phonenumber);
 
 
         imageView.setImageResource(currentDisplay.getImageResourceId());
         titleView.setText(currentDisplay.getPlaceName());
-        descriptionView.setText(currentDisplay.getPlaceDescription());
         addressView.setText(currentDisplay.getPlaceAddress());
         phonenumberView.setText(currentDisplay.getPlacePhoneNumber());
 
