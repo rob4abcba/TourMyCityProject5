@@ -1,6 +1,6 @@
 package com.example.therussells.tourmycityproject5;
 
-public  class Display {
+public  class Site {
 
     //class declaration with 4 instance variables for this fragment
     private final String placeName;
@@ -12,7 +12,7 @@ public  class Display {
     private final int imageResourceId;
 
     // constructors in which we instantiate the instance variables
-    Display(String placeName, String placeAddress, String placePhoneNumber, int imageResourceId){
+    Site(String placeName, String placeAddress, String placePhoneNumber, int imageResourceId){
         this.placeName = placeName;
         this.placeAddress = placeAddress;
         this.placePhoneNumber = placePhoneNumber;
