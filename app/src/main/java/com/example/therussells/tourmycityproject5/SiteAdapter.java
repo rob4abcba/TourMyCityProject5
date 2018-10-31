@@ -36,16 +36,17 @@ public class SiteAdapter extends RecyclerView.Adapter<SiteAdapter.SiteViewHolder
     }
 
     @Override
-    public void onBindViewHolder(@NonNull SiteViewHolder displayViewHolder, int position) {
+    public void onBindViewHolder(@NonNull SiteViewHolder holder, int position) {
 
        // get object located at the position in list
         Site currentSite = sites.get(position);
 
         //binding the data with the viewholder views
-        displayViewHolder.imageView.setImageResource(currentSite.getImageResourceId());
-        displayViewHolder.titleView.setText(currentSite.getPlaceName());
-        displayViewHolder.addressView.setText(currentSite.getPlaceAddress());
-        displayViewHolder.phonenumberView.setText(currentSite.getPlacePhoneNumber());
+        holder.imageView.setImageResource(currentSite.getImageResourceId());
+        holder.titleView.setText(currentSite.getPlaceName());
+        holder.addressView.setText(currentSite.getPlaceAddress());
+        holder.phonenumberView.setText(currentSite.getPlacePhoneNumber());
+
 
     }
 
@@ -63,10 +64,10 @@ public class SiteAdapter extends RecyclerView.Adapter<SiteAdapter.SiteViewHolder
 
         SiteViewHolder(@NonNull View itemView) {
             super(itemView);
-            ImageView imageView = itemView.findViewById(R.id.image);
-            TextView titleView = itemView.findViewById(R.id.title);
-            TextView addressView = itemView.findViewById(R.id.address);
-            TextView phonenumberView =itemView.findViewById(R.id.phonenumber);
+            imageView=itemView.findViewById(R.id.image);
+            titleView = itemView.findViewById(R.id.title);
+            addressView = itemView.findViewById(R.id.address);
+            phonenumberView =itemView.findViewById(R.id.phonenumber);
 
             titleView.setSelected(true);
             addressView.setSelected(true);
