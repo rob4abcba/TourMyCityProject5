@@ -1,6 +1,5 @@
 package com.example.therussells.tourmycityproject5;
 
-import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -20,7 +19,7 @@ public class SiteAdapter extends RecyclerView.Adapter<SiteAdapter.SiteViewHolder
 
 
     //getting the context and array we want with the constructor
-   public SiteAdapter(ArrayList<Site> sites) {
+    SiteAdapter(ArrayList<Site> sites) {
         this.sites = sites;
 
     }
@@ -68,6 +67,11 @@ public class SiteAdapter extends RecyclerView.Adapter<SiteAdapter.SiteViewHolder
             TextView titleView = itemView.findViewById(R.id.title);
             TextView addressView = itemView.findViewById(R.id.address);
             TextView phonenumberView =itemView.findViewById(R.id.phonenumber);
+
+            titleView.setSelected(true);
+            addressView.setSelected(true);
+            phonenumberView.setSelected(true);
+
         }
     }
 }
